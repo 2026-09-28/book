@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="안데르센 인어 공주 — 파도와 빛으로 읽는 동화책">
+    <title>인어 공주 — 파도의 동화책</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Pretendard:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <a class="skip" href="#book-title">본문으로 건너뛰기</a>
+
+    <div class="ocean-bg" aria-hidden="true">
+        <div class="aurora"><i></i><i></i></div>
+        <div class="light-rays"><i></i><i></i><i></i></div>
+        <div class="bubbles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <input class="pager" type="radio" name="book" id="pg-00" checked aria-label="표지로 이동">
+    <input class="pager" type="radio" name="book" id="pg-01" aria-label="1장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-02" aria-label="2장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-03" aria-label="3장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-04" aria-label="4장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-05" aria-label="5장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-06" aria-label="6장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-07" aria-label="7장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-08" aria-label="8장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-09" aria-label="9장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-10" aria-label="10장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-11" aria-label="11장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-12" aria-label="12장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-13" aria-label="13장으로 이동">
+    <input class="pager" type="radio" name="book" id="pg-14" aria-label="14장으로 이동">
+    <input class="toc-check" type="checkbox" id="toc-open">
+
+    <div class="shell">
+        <header class="topbar">
+            <a class="brand" href="#book-title" aria-label="책 처음으로">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32">
+                        <path d="M4 20c3-1 4-5 7-5s3 4 6 4 3-6 7-6c-1 6-3 11-10 11S6 23 4 20Z" fill="currentColor" />
+                        <circle cx="23" cy="9" r="3" fill="currentColor" opacity=".7" />
+                    </svg>
+                </span>
+                <span class="brand-text"><strong>파도의 도서관</strong><em>인어 공주</em></span>
+            </a>
+            <div class="top-actions">
+                <span class="page-hint" aria-hidden="true">옆으로 넘겨 읽어요</span>
+                <label class="toc-btn" for="toc-open">목차</label>
+            </div>
+        </header>
+
+        <div class="progress" aria-hidden="true"><i></i></div>
+
+        <div class="toc-dim"><label for="toc-open" aria-label="목차 닫기"></label></div>
+        <nav class="toc" aria-label="목차">
+            <div class="toc-head">
+                <p>CONTENTS</p>
+                <h2>어느 바닷속 이야기</h2>
+                <label class="toc-close" for="toc-open">닫기</label>
+            </div>
+            <ol>
+                <li><label for="pg-00"><b>표지</b>빛나는 파도 위, 인어의 노래</label></li>
+                <li><label for="pg-01"><b>01</b>깊은 바닷속 왕국</label></li>
+                <li><label for="pg-02"><b>02</b>여섯 공주와 막내</label></li>
+                <li><label for="pg-03"><b>03</b>비밀 정원</label></li>
+                <li><label for="pg-04"><b>04</b>열다섯 살의 약속</label></li>
+                <li><label for="pg-05"><b>05</b>언니들이 본 세상</label></li>
+                <li><label for="pg-06"><b>06</b>파도 위의 노래</label></li>
+                <li><label for="pg-07"><b>07</b>왕자의 생일</label></li>
+                <li><label for="pg-08"><b>08</b>구조와 이별</label></li>
+                <li><label for="pg-09"><b>09</b>영혼을 묻다</label></li>
+                <li><label for="pg-10"><b>10</b>마녀의 숲</label></li>
+                <li><label for="pg-11"><b>11</b>목소리와 다리</label></li>
+                <li><label for="pg-12"><b>12</b>육지의 나날</label></li>
+                <li><label for="pg-13"><b>13</b>결혼식과 새벽</label></li>
+                <li><label for="pg-14"><b>14</b>공기의 딸들</label></li>
+            </ol>
+            <p class="toc-foot">안데르센 원작 · 김선희 역</p>
+        </nav>
+
+        <main class="book-stage" id="book-title">
+            <div class="book">
+
+                <!-- COVER -->
+                <section class="sheet sheet-00" aria-label="표지">
+                    <div class="cover-grid">
+                        <div class="cover-art">
+                            <svg class="cover-svg" viewBox="0 0 800 560" role="img" aria-label="일몰 바다 위 바위에 앉은 인어와 배">
+                                <defs>
+                                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#0b1e4b" />
+                                        <stop offset=".45" stop-color="#3b2a6b" />
+                                        <stop offset=".68" stop-color="#c0527a" />
+                                        <stop offset=".82" stop-color="#ff9d6b" />
+                                        <stop offset="1" stop-color="#ffe9b8" />
+                                    </linearGradient>
+                                    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#0e7aa5" />
+                                        <stop offset=".35" stop-color="#0a4f7a" />
+                                        <stop offset=".7" stop-color="#072c52" />
+                                        <stop offset="1" stop-color="#041a38" />
+                                    </linearGradient>
+                                    <radialGradient id="sunGlow" cx=".5" cy=".5" r=".5">
+                                        <stop offset="0" stop-color="#fff6d6" stop-opacity=".95" />
+                                        <stop offset=".4" stop-color="#ffd88a" stop-opacity=".7" />
+                                        <stop offset="1" stop-color="#ff9d6b" stop-opacity="0" />
+                                    </radialGradient>
+                                    <linearGradient id="tailG" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="#6ef3d6" />
+                                        <stop offset=".5" stop-color="#22b8a8" />
+                                        <stop offset="1" stop-color="#0d5e8a" />
+                                    </linearGradient>
+                                    <linearGradient id="hairG" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#ff9db1" />
+                                        <stop offset="1" stop-color="#b93a63" />
+                                    </linearGradient>
+                                    <linearGradient id="rockG" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#5a6b86" />
+                                        <stop offset="1" stop-color="#25314a" />
+                                    </linearGradient>
+                                    <linearGradient id="waveA" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#bff6ff" stop-opacity=".9" />
+                                        <stop offset="1" stop-color="#4fc3e8" stop-opacity=".15" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="800" height="340" fill="url(#sky)" rx="24" />
+                                <g class="stars" fill="#fff">
+                                    <circle class="star s1" cx="80" cy="60" r="2.2" />
+                                    <circle class="star s2" cx="160" cy="38" r="1.6" />
+                                    <circle class="star s3" cx="250" cy="72" r="2" />
+                                    <circle class="star s4" cx="340" cy="34" r="1.5" />
+                                    <circle class="star s5" cx="430" cy="64" r="2.3" />
+                                    <circle class="star s6" cx="520" cy="36" r="1.6" />
+                                    <circle class="star s7" cx="610" cy="70" r="2" />
+                                    <circle class="star s8" cx="700" cy="48" r="1.8" />
+                                </g>
+                                <g class="shooting">
+                                    <line x1="120" y1="60" x2="220" y2="100" stroke="#fff" stroke-width="2.5"
+                                        stroke-linecap="round" />
+                                    <circle cx="220" cy="100" r="3" fill="#fff" />
+                                </g>
+                                <g class="moon">
+                                    <circle cx="660" cy="88" r="26" fill="#fff6d6" />
+                                    <circle cx="670" cy="82" r="22" fill="#3a2d68" opacity=".9" />
+                                </g>
+                                <g class="gulls" stroke="#1a2440" stroke-width="2.5" fill="none" stroke-linecap="round">
+                                    <path class="g g1" d="M300 120 q8 -8 16 0 q8 -8 16 0" />
+                                    <path class="g g2" d="M360 100 q6 -6 12 0 q6 -6 12 0" />
+                                    <path class="g g3" d="M250 95 q6 -6 12 0 q6 -6 12 0" />
+                                </g>
+                                <g class="clouds" fill="#fff" opacity=".55">
+                                    <ellipse class="cloud c1" cx="220" cy="150" rx="70" ry="16" />
+                                    <ellipse class="cloud c2" cx="520" cy="130" rx="90" ry="18" />
+                                    <ellipse class="cloud c3" cx="380" cy="180" rx="60" ry="12" />
+                                </g>
+                                <circle class="sun-core" cx="400" cy="310" r="54" fill="#ffdf9e" />
+                                <circle class="sun-halo" cx="400" cy="310" r="112" fill="url(#sunGlow)" />
+                                <g class="sun-shimmer" stroke="#ffe9b8" stroke-width="3" stroke-linecap="round"
+                                    opacity=".8">
+                                    <line class="sh1" x1="330" y1="322" x2="470" y2="322" />
+                                    <line class="sh2" x1="350" y1="334" x2="450" y2="334" />
+                                </g>
+                                <g class="ship">
+                                    <path d="M120 300 L210 300 L195 318 L135 318 Z" fill="#1a2440" />
+                                    <rect x="160" y="262" width="6" height="40" fill="#1a2440" />
+                                    <path d="M166 264 L200 298 L166 298 Z" fill="#fff4d6" />
+                                    <path d="M160 264 L130 298 L160 298 Z" fill="#ffd9a8" />
+                                    <g fill="#ffe27a" class="ship-lights">
+                                        <circle cx="140" cy="306" r="2.5" />
+                                        <circle cx="155" cy="306" r="2.5" />
+                                        <circle cx="170" cy="306" r="2.5" />
+                                        <circle cx="185" cy="306" r="2.5" />
+                                    </g>
+                                    <path class="flag" d="M166 256 L184 262 L166 268 Z" fill="#ff6b8a" />
+                                </g>
+                                <g class="ship2">
+                                    <path d="M600 285 L650 285 L642 296 L608 296 Z" fill="#1a2440" opacity=".8" />
+                                    <rect x="622" y="264" width="4" height="22" fill="#1a2440" />
+                                    <path d="M626 266 L644 285 L626 285Z" fill="#fff" opacity=".85" />
+                                </g>
+                                <rect y="314" width="800" height="246" fill="url(#sea)" />
+                                <g class="light-beam" opacity=".22" fill="#c8f6ff">
+                                    <polygon points="340,314 460,314 420,560 300,560" />
+                                    <polygon points="480,314 540,314 560,560 470,560" opacity=".6" />
+                                </g>
+                                <g class="jellies">
+                                    <g class="jelly j1">
+                                        <ellipse cx="0" cy="0" rx="14" ry="10" fill="#ffb3d9" opacity=".85" />
+                                        <path d="M-10 8 q2 8 0 14 M-3 10 q2 8 0 14 M4 10 q2 8 0 14" stroke="#ffb3d9"
+                                            fill="none" stroke-width="2" />
+                                    </g>
+                                    <g class="jelly j2">
+                                        <ellipse cx="0" cy="0" rx="10" ry="8" fill="#9beaff" opacity=".8" />
+                                        <path d="M-7 6 q2 6 0 10 M0 8 q2 6 0 10" stroke="#9beaff" fill="none"
+                                            stroke-width="2" />
+                                    </g>
+                                </g>
+                                <g class="fishes" fill="#9beaff">
+                                    <g class="fish f1">
+                                        <ellipse cx="0" cy="0" rx="14" ry="7" />
+                                        <polygon points="14,0 24,-6 24,6" />
+                                    </g>
+                                    <g class="fish f2">
+                                        <ellipse cx="0" cy="0" rx="10" ry="5" />
+                                        <polygon points="10,0 18,-4 18,4" />
+                                    </g>
+                                    <g class="fish f3">
+                                        <ellipse cx="0" cy="0" rx="12" ry="6" />
+                                        <polygon points="12,0 21,-5 21,5" />
+                                    </g>
+                                </g>
+                                <g class="rock-wrap">
+                                    <ellipse cx="560" cy="500" rx="150" ry="26" fill="#000" opacity=".35" />
+                                    <path d="M460 480 Q500 420 570 430 Q640 438 660 492 Q600 508 460 480Z"
+                                        fill="url(#rockG)" />
+                                </g>
+                                <g class="mermaid">
+                                    <path class="tail"
+                                        d="M560 450 Q530 470 505 492 Q495 502 508 508 Q525 512 540 498 Q552 486 568 482 Q585 478 592 492 Q596 502 588 510 L605 515 Q625 505 618 484 Q610 460 585 448 Z"
+                                        fill="url(#tailG)" />
+                                    <path class="tail-fin"
+                                        d="M505 492 Q480 488 468 468 Q485 472 495 480 Q488 462 492 448 Q504 464 512 482Z"
+                                        fill="#5eead4" />
+                                    <path d="M568 430 Q562 408 575 392 Q588 380 598 392 Q604 404 596 418 L590 432 Z"
+                                        fill="#ffd9c2" />
+                                    <path class="hair"
+                                        d="M575 388 Q555 390 548 410 Q542 432 552 452 Q560 442 558 424 Q565 410 580 408 Q600 410 604 430 Q606 448 596 458 Q610 448 610 428 Q608 398 590 386Z"
+                                        fill="url(#hairG)" />
+                                    <path d="M575 418 L568 448 Q575 456 590 452 L588 424 Z" fill="#ffd9c2" />
+                                    <circle cx="585" cy="402" r="1.8" fill="#1a2440" />
+                                </g>
+                                <g class="notes" fill="#fff" font-size="22" font-family="serif">
+                                    <text class="n n1" x="620" y="360">♪</text><text class="n n2" x="645"
+                                        y="340">♫</text><text class="n n3" x="605" y="335">♪</text>
+                                </g>
+                                <g class="splash" fill="#e6fbff">
+                                    <circle class="sp-water w1" cx="470" cy="492" r="4" />
+                                    <circle class="sp-water w2" cx="650" cy="496" r="5" />
+                                    <circle class="sp-water w3" cx="560" cy="510" r="3" />
+                                </g>
+                                <g class="waves">
+                                    <path class="wave w1"
+                                        d="M0 360 Q50 345 100 360 T200 360 T300 360 T400 360 T500 360 T600 360 T700 360 T800 360 L800 400 L0 400Z"
+                                        fill="url(#waveA)" opacity=".55" />
+                                    <path class="wave w2"
+                                        d="M0 390 Q60 375 120 390 T240 390 T360 390 T480 390 T600 390 T720 390 T840 390 L840 440 L0 440Z"
+                                        fill="#7ddcf2" opacity=".35" />
+                                    <path class="wave w3"
+                                        d="M0 430 Q70 415 140 430 T280 430 T420 430 T560 430 T700 430 T840 430 L840 560 L0 560Z"
+                                        fill="#062a4e" opacity=".55" />
+                                </g>
+                                <g class="foam" fill="#fff" opacity=".9">
+                                    <circle class="fm f1" cx="500" cy="440" r="3" />
+                                    <circle class="fm f2" cx="540" cy="436" r="2.2" />
+                                    <circle class="fm f3" cx="600" cy="442" r="2.6" />
+                                    <circle class="fm f4" cx="630" cy="438" r="2" />
+                                </g>
+                                <g class="cover-bubbles" fill="none" stroke="#c8f6ff" stroke-width="2">
+                                    <circle class="b b1" cx="220" cy="480" r="6" />
+                                    <circle class="b b2" cx="250" cy="500" r="4" />
+                                    <circle class="b b3" cx="480" cy="520" r="7" />
+                                    <circle class="b b4" cx="620" cy="480" r="5" />
+                                    <circle class="b b5" cx="700" cy="510" r="8" />
+                                </g>
+                                <g class="sparkles" fill="#fff8c8">
+                                    <path class="sp sp1" d="M400 250 l3 8 8 3 -8 3 -3 8 -3-8 -8-3 8-3Z" />
+                                    <path class="sp sp2" d="M620 250 l2 6 6 2 -6 2 -2 6 -2-6 -6-2 6-2Z" />
+                                    <path class="sp sp3" d="M200 220 l2 6 6 2 -6 2 -2 6 -2-6 -6-2 6-2Z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="cover-text">
+                            <p class="eyebrow">안데르센 단편선</p>
+                            <h1>인어 공주</h1>
+                            <p class="cover-sub">바닷속에서 별까지 — 사랑과 영혼에 대한 가장 슬프고 아름다운 이야기</p>
+                            <div class="cover-meta"><span>김선희 역</span><i>·</i><span>15쪽 동화책</span></div>
+                            <blockquote class="cover-quote">“단 하루라도 인간이 될 수 있다면,<br>내 삼백 년을 기꺼이 포기할 거예요.”</blockquote>
+                            <div class="cover-cta">
+                                <label class="btn primary" for="pg-01">펼쳐 읽기</label>
+                                <label class="btn ghost" for="toc-open">목차</label>
+                            </div>
+                            <p class="cover-hint">좌우를 눌러 페이지를 넘기세요</p>
+                        </div>
+                    </div>
+                    <footer class="page-foot"><span>표지</span><span>00 / 14</span></footer>
+                    <label class="edge next" for="pg-01" aria-label="다음 페이지">›</label>
+                </section>
+
+                <!-- 01 -->
+                <section class="sheet sheet-01" aria-label="깊은 바닷속 왕국">
+                    <header class="chapter">
+                        <p><span>01</span>깊은 바닷속 왕국</p>
+                        <h2>유리보다 투명한 바다</h2>
+                        <p class="lede">수레국화처럼 파란 바다 밑, 산호 궁전에 인어들이 산다</p>
+                    </header>
+                    <figure class="scene" aria-label="산호 궁전과 흔들리는 해초">
+                        <svg viewBox="0 0 320 120">
+                            <rect x="0" y="78" width="320" height="42" rx="10" fill="#0a4f7a" opacity=".14" />
+                            <g class="palace" fill="#c0527a">
+                                <rect x="130" y="52" width="60" height="32" rx="4" />
+                                <polygon points="130,52 145,30 160,52" />
+                                <polygon points="160,52 175,30 190,52" />
+                                <rect x="152" y="64" width="16" height="20" rx="8" fill="#fff" />
+                            </g>
+                            <g fill="#ffd166">
+                                <circle class="blink" cx="145" cy="46" r="2.5" />
+                                <circle class="blink d2" cx="175" cy="46" r="2.5" />
+                            </g>
+                            <g class="sway" stroke="#2a9d8f" stroke-width="4" stroke-linecap="round" fill="none">
+                                <path d="M50 84 Q46 60 56 42" />
+                                <path d="M66 84 Q66 62 60 48" />
+                                <path d="M262 84 Q268 60 258 42" />
+                                <path d="M278 84 Q278 62 284 48" />
+                            </g>
+                            <g class="drift" fill="#0e7aa5">
+                                <ellipse cx="150" cy="58" rx="9" ry="5" />
+                                <polygon points="159,58 165,54 165,62" />
+                            </g>
+                            <g class="rise-b" fill="none" stroke="#0e7aa5" stroke-width="2">
+                                <circle cx="105" cy="90" r="4" />
+                                <circle cx="218" cy="94" r="3" />
+                            </g>
+                        </svg>
+                        <figcaption>산호 궁전 — 보석 창문과 진주 조개 지붕</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">저</span> 멀리 드넓은 바다에, 바닷물은 수레국화 꽃잎만큼 파랗고 유리만큼 투명하다. 하지만 매우 깊다. 닻 밧줄이 닿는 곳보다
+                            더 깊이, 첨탑이 높이 쌓일 만큼 깊다. 거기 아래 인어들이 살았다.</p>
+                        <p>밑바닥은 하얀 모래만이 아니다. 하늘거리는 나무와 꽃이 자라 물이 일렁이면 살아있는 듯 흔들린다. 새가 나뭇가지를 날듯 물고기가 가지 사이를 드나든다.</p>
+                        <div class="callout">
+                            <p>가장 깊은 곳에 <b>바다 왕의 궁전</b>. 성벽은 산호, 창문은 보석과 호박, 지붕은 파도에 맞춰 여닫는 홍합 껍데기. 조개마다 왕관 부러운 진주를 품었다.
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="page-foot"><span>01 · 바닷속 왕국</span><span>01 / 14</span></footer>
+                    <label class="edge prev" for="pg-00" aria-label="이전">‹</label><label class="edge next" for="pg-02"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-00">이전</label><label
+                            class="btn small primary" for="pg-02">다음</label></div>
+                </section>
+
+                <!-- 02 -->
+                <section class="sheet sheet-02" aria-label="여섯 공주와 막내">
+                    <header class="chapter">
+                        <p><span>02</span>여섯 공주와 막내</p>
+                        <h2>장미보다 부드러운 마음</h2>
+                        <p class="lede">여섯 자매 중 막내가 가장 아름다웠다</p>
+                    </header>
+                    <figure class="scene" aria-label="여섯 개의 조개와 막내의 빛">
+                        <svg viewBox="0 0 320 120">
+                            <g class="shells" fill="#ffd9e3" stroke="#c0527a" stroke-width="2">
+                                <path class="shell" d="M28 78 Q34 58 48 58 Q62 58 66 78 Q48 86 28 78Z" />
+                                <path class="shell" d="M78 78 Q84 58 98 58 Q112 58 116 78 Q98 86 78 78Z" />
+                                <path class="shell" d="M128 78 Q134 58 148 58 Q162 58 166 78 Q148 86 128 78Z" />
+                                <path class="shell" d="M178 78 Q184 58 198 58 Q212 58 216 78 Q198 86 178 78Z" />
+                                <path class="shell" d="M228 78 Q234 58 248 58 Q262 58 266 78 Q248 86 228 78Z" />
+                            </g>
+                            <g class="baby">
+                                <path d="M268 78 Q276 52 294 52 Q312 52 316 78 Q294 90 268 78Z" fill="#ff8fab"
+                                    stroke="#b93a63" stroke-width="2.5" />
+                                <circle class="halo-pulse" cx="294" cy="52" r="6" fill="#ffd166" />
+                            </g>
+                            <g class="rise-b" fill="#ff8fab">
+                                <circle cx="60" cy="92" r="2.5" />
+                                <circle cx="180" cy="96" r="2" />
+                                <circle cx="250" cy="92" r="2.5" />
+                            </g>
+                        </svg>
+                        <figcaption>다섯 언니와 빛나는 막내</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">바</span>다 왕은 아내를 잃고 노모와 살았다. 노모는 현명했으나 귀족 자부심이 강해 자기 꼬리에 굴 열두 개를 달고, 궁정
+                            부인들에겐 여섯 개만 허락했다. 그래도 어린 공주들을 지극히 사랑했다.</p>
+                        <p>공주는 여섯. <b>막내가 가장 아름다웠다.</b> 피부 장미 꽃잎처럼 부드럽고 눈동자 깊은 바다처럼 파랬다. 다만 발 대신 물고기 꼬리가 있었다.</p>
+                        <p>낮엔 꽃이 벽에서 자라는 홀에서 놀았다. 호박 창이 열리면 물고기가 들어와 손에서 먹이를 받아먹었다.</p>
+                    </div>
+                    <footer class="page-foot"><span>02 · 여섯 공주</span><span>02 / 14</span></footer>
+                    <label class="edge prev" for="pg-01" aria-label="이전">‹</label><label class="edge next" for="pg-03"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-01">이전</label><label
+                            class="btn small primary" for="pg-03">다음</label></div>
+                </section>
+
+                <!-- 03 -->
+                <section class="sheet sheet-03" aria-label="비밀 정원">
+                    <header class="chapter">
+                        <p><span>03</span>비밀 정원</p>
+                        <h2>태양처럼 둥근 꽃밭</h2>
+                        <p class="lede">막내는 붉은 꽃과 소년 동상만 골랐다</p>
+                    </header>
+                    <figure class="scene" aria-label="둥근 꽃밭과 대리석 동상">
+                        <svg viewBox="0 0 320 120">
+                            <ellipse cx="110" cy="86" rx="62" ry="16" fill="#b93a63" opacity=".18" />
+                            <circle class="sun-spin" cx="110" cy="78" r="24" fill="none" stroke="#ff6b6b"
+                                stroke-width="3" stroke-dasharray="6 6" />
+                            <circle cx="110" cy="78" r="12" fill="#ffd166" />
+                            <g class="statue" fill="#dfe8f2" stroke="#8fa0bd" stroke-width="2">
+                                <rect x="222" y="52" width="26" height="38" rx="6" />
+                                <circle cx="235" cy="42" r="10" />
+                            </g>
+                            <g class="sway" stroke="#2a9d8f" stroke-width="4" fill="none" stroke-linecap="round">
+                                <path d="M262 90 Q258 66 270 52" />
+                            </g>
+                            <g fill="#ff8fab">
+                                <circle class="blink" cx="88" cy="78" r="3" />
+                                <circle class="blink d2" cx="132" cy="78" r="3" />
+                                <circle class="blink d3" cx="110" cy="62" r="3" />
+                            </g>
+                        </svg>
+                        <figcaption>태양 모양 꽃밭과 난파선의 소년 동상</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">성</span> 밖 정원엔 불꽃처럼 붉고 깊은 바다색 나무가 자랐다. 열매는 황금빛, 꽃은 불꽃처럼 일렁였다. 흙은 유황처럼 파란
+                            고운 모래. 고요한 날 태양은 꽃받침에서 흘러나온 붉은 꽃 같았다.</p>
+                        <p>공주마다 작은 꽃밭. 고래 모양, 인어 모양. <b>막내는 태양처럼 둥글게</b> 만들고 붉은 꽃만 심었다. 난파선에서 가라앉은 <b>소년 대리석 동상</b> 옆에
+                            붉은 버드나무를 심으니 가지가 보랏빛 그늘을 드리웠다.</p>
+                    </div>
+                    <footer class="page-foot"><span>03 · 비밀 정원</span><span>03 / 14</span></footer>
+                    <label class="edge prev" for="pg-02" aria-label="이전">‹</label><label class="edge next" for="pg-04"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-02">이전</label><label
+                            class="btn small primary" for="pg-04">다음</label></div>
+                </section>
+
+                <!-- 04 -->
+                <section class="sheet sheet-04" aria-label="열다섯 살의 약속">
+                    <header class="chapter">
+                        <p><span>04</span>열다섯 살의 약속</p>
+                        <h2>수면 위 세상을 꿈꾸다</h2>
+                        <p class="lede">열다섯이 되면 달빛 바위에 앉을 수 있다</p>
+                    </header>
+                    <figure class="scene" aria-label="달과 바위와 창문">
+                        <svg viewBox="0 0 320 120">
+                            <circle class="moon-breathe" cx="246" cy="34" r="20" fill="#fff3c4" stroke="#e9c46a"
+                                stroke-width="2" />
+                            <path d="M30 92 Q90 78 150 88 T300 86 L300 110 L30 110Z" fill="#0a4f7a" opacity=".2" />
+                            <path d="M210 92 Q230 62 262 68 Q286 74 282 92Z" fill="#5a6b86" />
+                            <g class="dreamer" fill="#5eead4">
+                                <ellipse cx="246" cy="60" rx="8" ry="4" />
+                                <path d="M246 60 L246 48" stroke="#0a4f7a" stroke-width="3" />
+                            </g>
+                            <g class="rise-b" fill="none" stroke="#0e7aa5" stroke-width="2">
+                                <circle cx="90" cy="88" r="4" />
+                                <circle cx="112" cy="76" r="3" />
+                                <circle cx="132" cy="62" r="2.5" />
+                            </g>
+                            <rect x="52" y="52" width="44" height="34" rx="6" fill="#ffd166" opacity=".3" />
+                            <rect x="52" y="52" width="44" height="34" rx="6" fill="none" stroke="#b78d3e"
+                                stroke-width="2" />
+                        </svg>
+                        <figcaption>창가에서 달과 배를 상상하는 막내</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">막</span>내는 인간 세상 이야기에 푹 빠졌다. 땅의 꽃은 향기롭고 숲은 푸르며, ‘물고기(새)’는 달콤하게 노래한다. 할머니는
+                            새를 ‘물고기’라 불러야 했다.</p>
+                        <blockquote>“열다섯이 되면 달빛 바위에 앉아도 된단다. 큰 배와 숲과 마을을 보게 될 거야.” <cite>— 할머니</cite></blockquote>
+                        <p>맏이까지 1년, 막내까지 5년. 언니들은 본 것을 다 들려주기로 했다. 막내는 밤마다 창가에 서서 머리 위로 지나가는 고래와 배를 상상했다.</p>
+                    </div>
+                    <footer class="page-foot"><span>04 · 약속</span><span>04 / 14</span></footer>
+                    <label class="edge prev" for="pg-03" aria-label="이전">‹</label><label class="edge next" for="pg-05"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-03">이전</label><label
+                            class="btn small primary" for="pg-05">다음</label></div>
+                </section>
+
+                <!-- 05 -->
+                <section class="sheet sheet-05" aria-label="언니들이 본 세상">
+                    <header class="chapter">
+                        <p><span>05</span>언니들이 본 세상</p>
+                        <h2>도시와 일몰과 숲</h2>
+                        <p class="lede">맏이의 도시, 둘째의 일몰, 셋째의 강</p>
+                    </header>
+                    <figure class="scene" aria-label="도시 불빛과 일몰과 백조">
+                        <svg viewBox="0 0 320 120">
+                            <circle class="sun-set" cx="160" cy="78" r="22" fill="#ff9d6b" />
+                            <rect x="0" y="78" width="320" height="6" fill="#ff9d6b" opacity=".4" />
+                            <g class="city" fill="#1a2440">
+                                <rect x="18" y="52" width="16" height="30" />
+                                <rect x="38" y="44" width="14" height="38" />
+                                <rect x="56" y="58" width="16" height="24" />
+                            </g>
+                            <g fill="#ffe27a">
+                                <circle class="blink" cx="24" cy="58" r="1.8" />
+                                <circle class="blink d2" cx="44" cy="52" r="1.8" />
+                                <circle class="blink d3" cx="62" cy="64" r="1.8" />
+                            </g>
+                            <g class="swans" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round">
+                                <path d="M220 44 q8 -7 16 0 q8 -7 16 0" />
+                                <path d="M248 56 q6 -5 12 0 q6 -5 12 0" />
+                            </g>
+                            <g class="sway" stroke="#2a9d8f" stroke-width="4" fill="none" stroke-linecap="round">
+                                <path d="M292 84 Q290 66 298 56" />
+                            </g>
+                        </svg>
+                        <figcaption>불빛 도시 · 황금 일몰 · 백조 무리</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><b>맏이 —</b> 달빛 모래톱, 별 같은 도시 불빛, 마차와 종소리. “들어 가고 싶었어.”</p>
+                        <p><b>둘째 —</b> 황금 하늘과 말 못 할 구름. 백조가 흰 장막처럼 지는 해를 향해 날았다.</p>
+                        <p><b>셋째 —</b> 강 위 초록 언덕과 숲속 성. 물장구치는 아이들과 놀고 싶었으나 달아나고, 처음 본 개가 짖어 돌아왔다.</p>
+                    </div>
+                    <footer class="page-foot"><span>05 · 세상 Ⅰ</span><span>05 / 14</span></footer>
+                    <label class="edge prev" for="pg-04" aria-label="이전">‹</label><label class="edge next" for="pg-06"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-04">이전</label><label
+                            class="btn small primary" for="pg-06">다음</label></div>
+                </section>
+
+                <!-- 06 -->
+                <section class="sheet sheet-06" aria-label="파도 위의 노래">
+                    <header class="chapter">
+                        <p><span>06</span>파도 위의 노래</p>
+                        <h2>폭풍, 그리고 향수병</h2>
+                        <p class="lede">신기함은 한 달, 고향이 최고</p>
+                    </header>
+                    <figure class="scene" aria-label="돌고래와 빙산과 노래">
+                        <svg viewBox="0 0 320 120">
+                            <polygon class="iceberg" points="40,86 66,40 94,86" fill="#dff3ff" stroke="#7fb6d9"
+                                stroke-width="2" />
+                            <circle class="blink" cx="66" cy="56" r="2.5" fill="#fff" />
+                            <g class="dolphin" fill="#0e7aa5">
+                                <ellipse cx="190" cy="66" rx="22" ry="9" />
+                                <polygon points="212,66 226,58 226,74" />
+                                <path d="M178 62 Q170 52 160 56" stroke="#0e7aa5" stroke-width="4" fill="none" />
+                            </g>
+                            <g class="spray" fill="#7ddcf2">
+                                <circle cx="150" cy="48" r="2.5" />
+                                <circle cx="160" cy="40" r="2" />
+                                <circle cx="170" cy="48" r="2.5" />
+                            </g>
+                            <g class="notes-mini" font-size="16" fill="#0e7aa5"><text class="n n1" x="252"
+                                    y="50">♪</text><text class="n n2" x="270" y="40">♫</text></g>
+                            <path d="M0 88 Q40 80 80 88 T160 88 T240 88 T320 88 L320 110 L0 110Z" fill="#0a4f7a"
+                                opacity=".18" />
+                        </svg>
+                        <figcaption>분수 고래 · 진주 빙산 · 다섯 자매의 노래</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><b>넷째 —</b> 유리 지붕 같은 하늘, 갈매기 같은 배, 공중제비 돌고래와 분수 고래.</p>
+                        <p><b>다섯째 —</b> 진초록 바다와 진주 빙산. 빙산 위 긴 머리를 보고 뱃사람들이 달아났다.</p>
+                        <p>어른이 되어 어디든 가게 되자 한 달이면 향수병. “바다 밑 같은 곳은 없어.” 저녁엔 다섯이 팔짱 끼고 인간보다 아름답게 노래했다.</p>
+                    </div>
+                    <footer class="page-foot"><span>06 · 세상 Ⅱ</span><span>06 / 14</span></footer>
+                    <label class="edge prev" for="pg-05" aria-label="이전">‹</label><label class="edge next" for="pg-07"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-05">이전</label><label
+                            class="btn small primary" for="pg-07">다음</label></div>
+                </section>
+
+                <!-- 07 -->
+                <section class="sheet sheet-07" aria-label="왕자의 생일">
+                    <header class="chapter">
+                        <p><span>07</span>왕자의 생일</p>
+                        <h2>불꽃과 난파</h2>
+                        <p class="lede">열여섯 왕자의 생일밤에 폭풍이 왔다</p>
+                    </header>
+                    <figure class="scene" aria-label="배와 불꽃과 번개">
+                        <svg viewBox="0 0 320 120">
+                            <g class="ship-mini">
+                                <path d="M110 84 L190 84 L178 98 L122 98Z" fill="#1a2440" />
+                                <rect x="147" y="54" width="4" height="30" fill="#1a2440" />
+                                <path d="M151 56 L174 82 L151 82Z" fill="#fff4d6" />
+                            </g>
+                            <g class="fw">
+                                <circle class="fw1" cx="60" cy="34" r="3" fill="#ff6b8a" />
+                                <circle class="fw2" cx="250" cy="28" r="3" fill="#ffd166" />
+                                <circle class="fw3" cx="210" cy="48" r="2.5" fill="#ff8fab" />
+                                <path class="fw-line" d="M60 44 L60 62 M250 38 L250 56" stroke="#ffd166"
+                                    stroke-width="2" />
+                            </g>
+                            <path class="bolt" d="M272 22 L264 44 L272 44 L262 66 L280 40 L271 40 Z" fill="#ffe27a" />
+                            <path d="M0 92 Q40 84 80 92 T160 92 T240 92 T320 92 L320 110 L0 110Z" fill="#0a4f7a"
+                                opacity=".2" />
+                        </svg>
+                        <figcaption>백 개의 불꽃, 그리고 산 같은 파도</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">마</span>침내 막내도 열다섯. 진주 백합 화관과 큰 굴 여덟 개를 달고 거품처럼 올랐다.</p>
+                        <p>돛 세 개 큰 배, 수백 불빛, 만국기. 창가엔 <b>검은 눈의 열여섯 왕자</b>. 백 개 불꽃이 대낮처럼 터졌다.</p>
+                        <p>출항 뒤 구름과 번개. 배는 파도에 튀었다 뒹굴다 갈라지고, 왕자가 가라앉았다.</p>
+                    </div>
+                    <footer class="page-foot"><span>07 · 폭풍</span><span>07 / 14</span></footer>
+                    <label class="edge prev" for="pg-06" aria-label="이전">‹</label><label class="edge next" for="pg-08"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-06">이전</label><label
+                            class="btn small primary" for="pg-08">다음</label></div>
+                </section>
+
+                <!-- 08 -->
+                <section class="sheet sheet-08" aria-label="구조와 이별">
+                    <header class="chapter">
+                        <p><span>08</span>구조와 이별</p>
+                        <h2>모래밭에 눕힌 아침</h2>
+                        <p class="lede">살려낸 왕자는 다른 사람을 보고 웃었다</p>
+                    </header>
+                    <figure class="scene" aria-label="해변의 아침과 두 사람">
+                        <svg viewBox="0 0 320 120">
+                            <circle class="sun-rise" cx="160" cy="66" r="20" fill="#ffd166" />
+                            <path d="M0 88 L320 88 L320 110 L0 110Z" fill="#f2e3bb" />
+                            <path d="M0 84 Q60 74 130 84 T320 82" fill="#7ddcf2" opacity=".7" />
+                            <g class="pair">
+                                <ellipse cx="140" cy="80" rx="12" ry="6" fill="#5eead4" />
+                                <circle cx="178" cy="76" r="8" fill="#ffd9c2" />
+                            </g>
+                            <circle class="heart" cx="160" cy="52" r="4" fill="#ff6b8a" />
+                            <g class="sway" stroke="#2a9d8f" stroke-width="4" fill="none" stroke-linecap="round">
+                                <path d="M272 88 Q272 66 284 56" />
+                            </g>
+                        </svg>
+                        <figcaption>하얀 모래 · 높은 괴 · 숨은 인어</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">“안</span> 돼, 죽으면 안 돼.” 나무와 판자를 뚫고 왕자에게 닿아 물 밖으로 머리를 받쳤다.</p>
+                        <p>아침 태양이 뺨에 생기를 불어넣었다. 꼭 꽃밭의 동상 같았다. 하얀 모래에 눕히고 머리를 높이 괴었다.</p>
+                        <p>종소리와 여인들. 공주는 바위 뒤 거품에 숨었다. 왕자는 웃으며 깨어났으나 공주를 몰랐다. 공주는 슬피 돌아갔다.</p>
+                    </div>
+                    <footer class="page-foot"><span>08 · 구조</span><span>08 / 14</span></footer>
+                    <label class="edge prev" for="pg-07" aria-label="이전">‹</label><label class="edge next" for="pg-09"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-07">이전</label><label
+                            class="btn small primary" for="pg-09">다음</label></div>
+                </section>
+
+                <!-- 09 -->
+                <section class="sheet sheet-09" aria-label="영혼을 묻다">
+                    <header class="chapter">
+                        <p><span>09</span>영혼을 묻다</p>
+                        <h2>삼백 년과 하루</h2>
+                        <p class="lede">거품으로 끝나는 삼백 년, 별로 오르는 영혼</p>
+                    </header>
+                    <figure class="scene" aria-label="거품과 별">
+                        <svg viewBox="0 0 320 120">
+                            <text x="52" y="66" font-size="26" font-family="serif" fill="#0a4f7a">300</text>
+                            <path d="M110 30 L110 90 M110 60 L150 60" stroke="#b78d3e" stroke-width="2" />
+                            <g class="soul-up" fill="#ffd166">
+                                <circle cx="220" cy="78" r="5" />
+                                <circle cx="238" cy="62" r="4" />
+                                <circle cx="254" cy="44" r="5" />
+                                <path d="M254 30 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2Z" />
+                            </g>
+                            <g class="rise-b" fill="none" stroke="#7fb6d9" stroke-width="2">
+                                <circle cx="150" cy="84" r="5" />
+                                <circle cx="170" cy="90" r="3.5" />
+                            </g>
+                        </svg>
+                        <figcaption>삼백 년 뒤 거품, 인간의 영혼은 별로</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">공</span>주는 말이 없어졌다. 매일 그곳에 갔으나 왕자는 없었다. 동상을 안는 게 위안. 정원은 황무지가 되었다.</p>
+                        <blockquote>“우린 삼백 년 뒤 거품이 되지. 영혼이 없거든. 인간의 영혼은 별로 올라간단다.” <cite>— 할머니</cite></blockquote>
+                        <p>“단 하루 인간이 된다면 삼백 년을 포기할래요.” 인간이 부모보다 사랑해 사제가 손을 맞잡으면 영혼이 스며든다. 그러나 “지느러민 흉하다 할 거야. 다리가 있어야
+                            해.”</p>
+                    </div>
+                    <footer class="page-foot"><span>09 · 영혼</span><span>09 / 14</span></footer>
+                    <label class="edge prev" for="pg-08" aria-label="이전">‹</label><label class="edge next" for="pg-10"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-08">이전</label><label
+                            class="btn small primary" for="pg-10">다음</label></div>
+                </section>
+
+                <!-- 10 -->
+                <section class="sheet sheet-10" aria-label="마녀의 숲">
+                    <header class="chapter">
+                        <p><span>10</span>마녀의 숲</p>
+                        <h2>소용돌이를 지나</h2>
+                        <p class="lede">잡으면 놓지 않는 폴립 사이를 뚫고</p>
+                    </header>
+                    <figure class="scene" aria-label="소용돌이와 폴립과 약">
+                        <svg viewBox="0 0 320 120">
+                            <g class="whirl" fill="none" stroke="#0a4f7a" stroke-width="3">
+                                <ellipse cx="90" cy="70" rx="44" ry="16" />
+                                <ellipse cx="90" cy="70" rx="28" ry="10" />
+                                <ellipse cx="90" cy="70" rx="12" ry="5" />
+                            </g>
+                            <g class="tentacles" stroke="#c0527a" stroke-width="4" stroke-linecap="round" fill="none">
+                                <path class="t t1" d="M190 88 Q186 66 196 54" />
+                                <path class="t t2" d="M210 88 Q214 66 206 52" />
+                                <path class="t t3" d="M230 88 Q234 68 244 56" />
+                            </g>
+                            <g class="potion-bub">
+                                <path d="M272 52 h22 l-5 24 a12 12 0 0 1-12 0Z" fill="#7ddcf2" />
+                                <circle cx="282" cy="42" r="3" fill="none" stroke="#0e7aa5" stroke-width="2" />
+                            </g>
+                        </svg>
+                        <figcaption>물레방아 소용돌이 · 끈적한 폴립 · 뼈다귀 집</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">무</span>도회 밤, 누구보다 감미롭게 노래했으나 마음은 위 세상뿐. 몰래 빠져나와 결심했다. <i>“마녀를 찾아가겠어.”</i>
+                        </p>
+                        <p>잿빛 모래, 빙글 도는 소용돌이, 끓는 ‘석탄 습지’. 반은 동물 반은 식물인 폴립의 숲. 잡으면 놓지 않는다. 머리를 묶고 물고기처럼 빠져나갔다.</p>
+                        <p>마녀는 웃었다. “꼬리를 없애고 다리를, 왕자의 사랑과 영혼을 원하지?”</p>
+                    </div>
+                    <footer class="page-foot"><span>10 · 마녀</span><span>10 / 14</span></footer>
+                    <label class="edge prev" for="pg-09" aria-label="이전">‹</label><label class="edge next" for="pg-11"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-09">이전</label><label
+                            class="btn small primary" for="pg-11">다음</label></div>
+                </section>
+
+                <!-- 11 -->
+                <section class="sheet sheet-11" aria-label="목소리와 다리">
+                    <header class="chapter">
+                        <p><span>11</span>목소리와 다리</p>
+                        <h2>칼날 위의 걸음</h2>
+                        <p class="lede">가장 아름다운 목소리를 주고 약을 받다</p>
+                    </header>
+                    <figure class="scene" aria-label="빛나는 약과 갈라지는 꼬리">
+                        <svg viewBox="0 0 320 120">
+                            <path d="M130 30 h28 l-6 34 a16 16 0 0 1-16 0Z" fill="#bfefff" stroke="#0a4f7a"
+                                stroke-width="2" />
+                            <rect class="potion-fill" x="132" y="52" width="24" height="14" fill="#22b8a8" />
+                            <circle class="glow-drop" cx="144" cy="44" r="4" fill="#ffd166" />
+                            <path class="split" d="M210 88 Q205 66 214 50 M226 88 Q231 66 222 50" stroke="#0a4f7a"
+                                stroke-width="4" stroke-linecap="round" fill="none" />
+                            <g class="notes-mini" font-size="16" fill="#b93a63"><text class="n n1" x="70"
+                                    y="52">♪</text><text class="n n2" x="88" y="40">♫</text></g>
+                            <path d="M70 88 L110 88" stroke="#b93a63" stroke-width="2" stroke-dasharray="4 4" />
+                        </svg>
+                        <figcaption>별처럼 빛나는 약 · 대가는 목소리</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">“해</span> 뜨기 전 약을 다 마셔. 꼬리가 갈라질 거야. 걸을 때마다 칼날 위 같을 거야.”</p>
+                        <blockquote>“다시 인어로 못 돌아와. 왕자의 사랑과 사제의 축복이 없으면 — 다음 날 아침 물거품이 돼.” <cite>— 마녀</cite></blockquote>
+                        <p>“감수하겠어요.” 마녀는 혀를 잘랐다. 약은 별처럼 빛나 폴립들이 몸을 말았다. 계단에서 약을 삼키자 칼처럼 몸을 내리쳤다. 깨어나니 다리가 있었다.</p>
+                    </div>
+                    <footer class="page-foot"><span>11 · 거래</span><span>11 / 14</span></footer>
+                    <label class="edge prev" for="pg-10" aria-label="이전">‹</label><label class="edge next" for="pg-12"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-10">이전</label><label
+                            class="btn small primary" for="pg-12">다음</label></div>
+                </section>
+
+                <!-- 12 -->
+                <section class="sheet sheet-12" aria-label="육지의 나날">
+                    <header class="chapter">
+                        <p><span>12</span>육지의 나날</p>
+                        <h2>춤추는 발끝</h2>
+                        <p class="lede">말없이 눈으로 말하는 ‘길에서 찾은 여인’</p>
+                    </header>
+                    <figure class="scene" aria-label="춤추는 발자국과 달">
+                        <svg viewBox="0 0 320 120">
+                            <circle cx="262" cy="32" r="16" fill="#fff3c4" stroke="#e9c46a" stroke-width="2" />
+                            <g class="steps" fill="#0a4f7a">
+                                <ellipse cx="120" cy="84" rx="10" ry="5" />
+                                <ellipse cx="160" cy="78" rx="10" ry="5" />
+                                <ellipse cx="200" cy="84" rx="10" ry="5" />
+                            </g>
+                            <g class="twinkles" fill="#ffd166">
+                                <path class="blink" d="M120 56 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2Z" />
+                                <path class="blink d2" d="M160 50 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2Z" />
+                                <path class="blink d3" d="M200 56 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2Z" />
+                            </g>
+                            <path d="M40 92 Q90 84 140 90" stroke="#7ddcf2" stroke-width="3" fill="none" opacity=".6" />
+                        </svg>
+                        <figcaption>쇠붙이 위 같아도 거품처럼 가볍게</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">실</span>크를 입으니 가장 아름다웠다. 말도 노래도 못 했으나 춤은 최고였다. 닿을 때마다 쇠붙이 같았으나 눈으로 말했다.
+                        </p>
+                        <p>숲을 달리고 산에 올랐다. 밤엔 발을 식히며 바다를 떠올렸다. 언니들과 할머니가 멀리서 손을 뻗었다.</p>
+                        <blockquote>“넌 날 구해준 소녀를 닮았어. 우린 결코 헤어지지 않을 거야.” <cite>— 왕자</cite></blockquote>
+                    </div>
+                    <footer class="page-foot"><span>12 · 육지</span><span>12 / 14</span></footer>
+                    <label class="edge prev" for="pg-11" aria-label="이전">‹</label><label class="edge next" for="pg-13"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-11">이전</label><label
+                            class="btn small primary" for="pg-13">다음</label></div>
+                </section>
+
+                <!-- 13 -->
+                <section class="sheet sheet-13" aria-label="결혼식과 새벽">
+                    <header class="chapter">
+                        <p><span>13</span>결혼식과 새벽</p>
+                        <h2>칼을 던진 바다</h2>
+                        <p class="lede">사랑을 죽일 수 없어 바다를 택했다</p>
+                    </header>
+                    <figure class="scene" aria-label="새벽 바다 위 칼">
+                        <svg viewBox="0 0 320 120">
+                            <rect x="0" y="0" width="320" height="70" rx="10" fill="#3b2a6b" opacity=".16" />
+                            <circle class="sun-rise" cx="160" cy="66" r="18" fill="#ff9d6b" />
+                            <g class="knife">
+                                <rect x="156" y="18" width="6" height="34" rx="3" fill="#8fa0bd"
+                                    transform="rotate(24 159 35)" />
+                                <rect x="150" y="50" width="14" height="5" rx="2" fill="#5a3b2e"
+                                    transform="rotate(24 157 52)" />
+                            </g>
+                            <path d="M0 78 Q40 70 80 78 T160 78 T240 78 T320 78 L320 110 L0 110Z" fill="#c0527a"
+                                opacity=".35" />
+                            <circle class="blink" cx="90" cy="40" r="2" fill="#fff" />
+                            <circle class="blink d2" cx="230" cy="34" r="2" fill="#fff" />
+                        </svg>
+                        <figcaption>잘린 머리의 언니들 · 붉어진 파도</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">이</span>웃 나라 공주는 본 적 없이 아름다웠다. “당신이었군요! 날 구해준 사람!” 왕자는 신부를 안았다. <b>내일 아침이면
+                                물거품.</b></p>
+                        <p>마지막 밤 제비처럼 춤추었다. 새벽, 언니들이 머리를 주고 얻은 칼을 내밀었다. “왕자를 찔러. 피가 발을 적시면 돌아와.”</p>
+                        <p>칼이 떨렸다. 왕자는 신부의 이름을 불렀다. 공주는 칼을 던지고 바다로 몸을 날렸다.</p>
+                    </div>
+                    <footer class="page-foot"><span>13 · 새벽</span><span>13 / 14</span></footer>
+                    <label class="edge prev" for="pg-12" aria-label="이전">‹</label><label class="edge next" for="pg-14"
+                        aria-label="다음">›</label>
+                    <div class="pager-nav"><label class="btn small" for="pg-12">이전</label><label
+                            class="btn small primary" for="pg-14">다음</label></div>
+                </section>
+
+                <!-- 14 -->
+                <section class="sheet sheet-14" aria-label="공기의 딸들">
+                    <header class="chapter">
+                        <p><span>14</span>공기의 딸들</p>
+                        <h2>거품에서 빛으로</h2>
+                        <p class="lede">고통과 충실함이 하늘로 들어올렸다</p>
+                    </header>
+                    <figure class="scene" aria-label="올라가는 빛의 존재들">
+                        <svg viewBox="0 0 320 120">
+                            <circle class="sun-rise" cx="160" cy="80" r="24" fill="#ffd166" />
+                            <ellipse cx="160" cy="80" rx="52" ry="10" fill="#ffd166" opacity=".3" />
+                            <g class="floaters" fill="#fff" stroke="#e9c46a" stroke-width="1.5">
+                                <g class="fl f1">
+                                    <ellipse cx="120" cy="60" rx="10" ry="14" />
+                                    <circle cx="120" cy="42" r="6" />
+                                </g>
+                                <g class="fl f2">
+                                    <ellipse cx="160" cy="46" rx="10" ry="14" />
+                                    <circle cx="160" cy="28" r="6" />
+                                </g>
+                                <g class="fl f3">
+                                    <ellipse cx="200" cy="60" rx="10" ry="14" />
+                                    <circle cx="200" cy="42" r="6" />
+                                </g>
+                            </g>
+                            <g class="rise-b" fill="#ff8fab">
+                                <circle cx="90" cy="90" r="3" />
+                                <circle cx="230" cy="90" r="3" />
+                            </g>
+                        </svg>
+                        <figcaption>투명한 존재들과 장밋빛 구름으로</figcaption>
+                    </figure>
+                    <div class="prose">
+                        <p><span class="drop">태</span>양이 거품을 따스히 비추었다. 죽음 대신 투명한 생명체들이 둥둥 떠 있었다. 공주도 그들과 같이 올라갔다.</p>
+                        <blockquote>“우리는 공기의 딸들. 선을 행하면 영혼을 얻지. 너의 고통과 충실함이 너를 들어 올렸어.”</blockquote>
+                        <p>처음으로 눈에 눈물이 고였다. 신부의 이마에 입 맞추고 왕자에게 미소 보내고 장밋빛 구름으로 올라갔다.</p>
+                        <div class="back-cta"><label class="btn small" for="pg-00">처음으로</label><label
+                                class="btn small primary" for="pg-13">이전 장</label></div>
+                    </div>
+                    <footer class="page-foot"><span>14 · 끝 — 안데르센 원작 · 김선희 역</span><span>14 / 14</span></footer>
+                    <label class="edge prev" for="pg-13" aria-label="이전">‹</label>
+                </section>
+
+            </div>
+
+            <p class="key-hint">하단 점 선택 후 <kbd>←</kbd> <kbd>→</kbd> 키로 넘기기 · 점 클릭으로도 이동</p>
+        </main>
+    </div>
+</body>
+
+</html>
